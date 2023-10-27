@@ -1,11 +1,13 @@
 import 'package:book_store/Features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'constants.dart';
 
 void main() {
-  runApp(const BookStore());
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: BookStore(),
+  ));
 }
 
 class BookStore extends StatelessWidget {
@@ -19,6 +21,7 @@ class BookStore extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backGroundColor,
       ),
+      initialRoute: '/',
       home: const SplashView(),
     );
   }

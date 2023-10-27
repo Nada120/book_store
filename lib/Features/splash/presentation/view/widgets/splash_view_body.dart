@@ -2,7 +2,6 @@ import 'package:book_store/Features/home/presentation/views/home_view.dart';
 import 'package:book_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../../constants.dart';
 
 class SplashViewBody extends StatefulWidget {
