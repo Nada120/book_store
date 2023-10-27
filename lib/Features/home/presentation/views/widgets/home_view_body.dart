@@ -10,9 +10,25 @@ class HomeViewBody extends StatelessWidget {
     return const Column(
       children: [
         CustomAppBar(),
-        CustomListViewItem(),
       ],
     );
   }
 }
 
+class FeaturedBooksListView extends StatelessWidget {
+  final List<String> imagePaths;
+  const FeaturedBooksListView({super.key, required this.imagePaths});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 200,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: imagePaths.length,
+        itemBuilder: (context, index) =>
+            CustomListViewItem(imagePath: imagePaths[index]),
+      ),
+    );
+  }
+}
