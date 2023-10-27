@@ -21,7 +21,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       duration: const Duration(seconds: 1),
     );
     slidingAnimation = Tween<Offset>(
-      begin: const Offset(0, 2.6),
+      begin: const Offset(0, 2),
       end: Offset.zero,
     ).animate(controller);
     controller.forward();
@@ -44,6 +44,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
           height: 200,
           width: 200,
         ),
+        const SizedBox(height: 5),
         AnimatedBuilder(
           animation: slidingAnimation,
           builder: (context, _) => SlideTransition(
@@ -51,6 +52,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
             child: const Text(
               'BOOK STORE',
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
